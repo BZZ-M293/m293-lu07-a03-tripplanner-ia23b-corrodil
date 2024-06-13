@@ -93,6 +93,22 @@
     <input type="checkbox" id="mietwagen-buchung" name="mietwagen-buchung">
     <label for="mietwagen-buchung">Mietwagen buchen</label><br>
   </fieldset>
+
+  <fieldset>
+    <legend>Reiseort</legend>
+    <label for="reiseziel">Wohin geht die Reise?</label>
+    <input list="reiseziele" id="reiseziel" name="reiseziel" placeholder="Wählen Sie ein Reiseziel oder geben Sie Ihren eigenen Zielort ein">
+
+    <datalist id="reiseziele">
+      <option value="Paris">
+      <option value="London">
+      <option value="New York">
+      <option value="Rom">
+      <option value="Tokio">
+      <option value="Schweiz">
+    </datalist>
+
+  </fieldset>
 </form>
 </body>
 </html>
