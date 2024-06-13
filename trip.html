@@ -7,29 +7,24 @@
 </head>
 <body>
 <h1>Reisebuchungs-Formular</h1>
-<form>
+<form action="https://it.bzz.ch/demo/formdata/index.php">
+
   <fieldset>
-    <legend>Flughafen</legend>
-    <label>Abflughafen
-      <select name="Abflughafen" size="6">
-        <optgroup label="Schweiz">
-          <option label="Basel">Basel</option>
-          <option label="Zürich">Zürich</option>
-          <option label="Genf">Zürich</option>
-        </optgroup>
-        <optgroup label="Deutschland">
-          <option label="Frankfurt/Main">Frankfurt/Main</option>
-          <option label="München">München</option>
-          <option label="Berlin">Berlin</option>
-        </optgroup>
-        <optgroup label="Frankreich">
-          <option label="Bastia">Bastia</option>
-          <option label="Bordeaux">Bordeaux</option>
-          <option label="Lyon">Lyon</option>
-        </optgroup>
-      </select>
-    </label>
+    <legend>Reiseort</legend>
+    <label for="reiseziel">Wohin geht die Reise?</label>
+    <input list="reiseziele" id="reiseziel" name="reiseziel" placeholder="Wählen Sie ein Reiseziel oder geben Sie Ihren eigenen Zielort ein" required>
+
+    <datalist id="reiseziele">
+      <option value="Paris">
+      <option value="London">
+      <option value="New York">
+      <option value="Rom">
+      <option value="Tokio">
+      <option value="Schweiz">
+    </datalist>
   </fieldset>
+
+
   <fieldset>
     <legend>Art</legend>
     <input type="radio" id="Ho" name="Hotel" value="Hotel">
@@ -38,16 +33,6 @@
     <label for="f">Ferienwohnung</label>
     <input type="radio" id="Hs" name="Hostel" value="Hostel">
     <label for="Hs">Hostel</label>
-
-  </fieldset>
-  <fieldset>
-    <legend>Dienstleistungen</legend>
-    <input type="checkbox" name="zutat[]" value="R" id="Re" checked>
-    <label for="Re">Reiseversicherung</label>
-    <input type="checkbox" name="zutat[]" value="f" id="check2">
-    <label for="f">Flughafentransfer</label>
-    <input type="checkbox" name="zutat[]" value="z" id="z">
-    <label for="z">zusätzliches Gepäck</label>
   </fieldset>
 
 
@@ -67,8 +52,33 @@
   <fieldset>
     <legend>Anzahl Personen</legend>
     <label for="anzPerson">Anzahl Reisende Personen</label>
-    <input type="number" id="anzPerson" name="anzPerson">
+    <input type="number" id="anzPerson" name="anzPerson" required>
   </fieldset>
+
+
+  <fieldset>
+    <legend>Flughafen</legend>
+    <label>Abflughafen
+      <select name="Abflughafen" size="6" required>
+        <optgroup label="Schweiz">
+          <option label="Basel">Basel</option>
+          <option label="Zürich">Zürich</option>
+          <option label="Genf">Zürich</option>
+        </optgroup>
+        <optgroup label="Deutschland">
+          <option label="Frankfurt/Main">Frankfurt/Main</option>
+          <option label="München">München</option>
+          <option label="Berlin">Berlin</option>
+        </optgroup>
+        <optgroup label="Frankreich">
+          <option label="Bastia">Bastia</option>
+          <option label="Bordeaux">Bordeaux</option>
+          <option label="Lyon">Lyon</option>
+        </optgroup>
+      </select>
+    </label>
+  </fieldset>
+
   <fieldset>
     <legend>Fluggesellschaft:</legend>
     <label for="fluglinie">Wählen Sie Ihre bevorzugte Fluggesellschaft:</label>
@@ -83,6 +93,16 @@
   </fieldset>
 
   <fieldset>
+    <legend>Dienstleistungen</legend>
+    <input type="checkbox" name="dl[]" value="Reiseversicherugn" id="Re" checked>
+    <label for="Re">Reiseversicherung</label>
+    <input type="checkbox" name="dl[]" value="flughafentransfer" id="check2">
+    <label for="f">Flughafentransfer</label>
+    <input type="checkbox" name="dl[]" value="zusatz_gepaeck" id="z">
+    <label for="z">zusätzliches Gepäck</label>
+  </fieldset>
+
+  <fieldset>
     <legend>Optionale Dienstleistungen</legend>
     <input type="checkbox" id="priority-checkin" name="priority-checkin">
     <label for="priority-checkin">Priority-Check-In</label><br>
@@ -94,20 +114,6 @@
     <label for="mietwagen-buchung">Mietwagen buchen</label><br>
   </fieldset>
 
-  <fieldset>
-    <legend>Reiseort</legend>
-    <label for="reiseziel">Wohin geht die Reise?</label>
-    <input list="reiseziele" id="reiseziel" name="reiseziel" placeholder="Wählen Sie ein Reiseziel oder geben Sie Ihren eigenen Zielort ein">
-
-    <datalist id="reiseziele">
-      <option value="Paris">
-      <option value="London">
-      <option value="New York">
-      <option value="Rom">
-      <option value="Tokio">
-      <option value="Schweiz">
-    </datalist>
-  </fieldset>
 
   <fieldset>
     <legend>E-Mail</legend>
