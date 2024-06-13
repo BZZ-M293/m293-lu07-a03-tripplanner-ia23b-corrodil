@@ -32,16 +32,16 @@
   </fieldset>
   <fieldset>
     <legend>Art</legend>
-      <input type="radio" id="Ho" name="Hotel" value="Hotel">
-      <label for="Ho">Hotel</label>
-      <input type="radio" id="f" name="ferienwohnung" value="Ferienwohnung">
-      <label for="f">Ferienwohnung</label>
-      <input type="radio" id="Hs" name="Hostel" value="Hostel">
-      <label for="Hs">Hostel</label>
+    <input type="radio" id="Ho" name="Hotel" value="Hotel">
+    <label for="Ho">Hotel</label>
+    <input type="radio" id="f" name="ferienwohnung" value="Ferienwohnung">
+    <label for="f">Ferienwohnung</label>
+    <input type="radio" id="Hs" name="Hostel" value="Hostel">
+    <label for="Hs">Hostel</label>
 
   </fieldset>
   <fieldset>
-    <legend>Dienstleistungen </legend>
+    <legend>Dienstleistungen</legend>
     <input type="checkbox" name="zutat[]" value="R" id="Re" checked>
     <label for="Re">Reiseversicherung</label>
     <input type="checkbox" name="zutat[]" value="f" id="check2">
@@ -49,6 +49,8 @@
     <input type="checkbox" name="zutat[]" value="z" id="z">
     <label for="z">zusätzliches Gepäck</label>
   </fieldset>
+
+
   <fieldset>
     <legend>Reisezeitraum</legend>
     <label for="start-date">Anfangszeitpunkt:</label>
@@ -60,10 +62,24 @@
     <label for="duration">Dauer der Reise in Tagen (1-21):</label>
     <input type="number" id="duration" name="duration" min="1" max="21" required><br><br>
   </fieldset>
+
+
   <fieldset>
     <legend>Anzahl Personen</legend>
     <label for="anzPerson">Anzahl Reisende Personen</label>
     <input type="number" id="anzPerson" name="anzPerson">
+  </fieldset>
+  <fieldset>
+    <legend>Gluggesellschaft:</legend>
+    <label for="fluglinie">Wählen Sie Ihre bevorzugte Fluggesellschaft:</label>
+    <select id="fluglinie" name="fluglinie">
+      <option value="">Bitte auswählen</option>
+      <option value="lufthansa">Lufthansa</option>
+      <option value="emirates">Emirates</option>
+      <option value="british-airways">British Airways</option>
+      <option value="air-france">Air France</option>
+      <option value="singapore-airlines">Singapore Airlines</option>
+    </select>
   </fieldset>
 </form>
 </body>
