@@ -6,9 +6,60 @@
 
 </head>
 <body>
-
 <h1>Reisebuchungs-Formular</h1>
+<form>
+  <fieldset>
+    <legend>Flughafen</legend>
+    <label>Abflughafen
+      <select name="Abflughafen" size="6">
+        <optgroup label="Schweiz">
+          <option label="Basel">Basel</option>
+          <option label="Zürich">Zürich</option>
+          <option label="Genf">Zürich</option>
+        </optgroup>
+        <optgroup label="Deutschland">
+          <option label="Frankfurt/Main">Frankfurt/Main</option>
+          <option label="München">München</option>
+          <option label="Berlin">Berlin</option>
+        </optgroup>
+        <optgroup label="Frankreich">
+          <option label="Bastia">Bastia</option>
+          <option label="Bordeaux">Bordeaux</option>
+          <option label="Lyon">Lyon</option>
+        </optgroup>
+      </select>
+    </label>
+  </fieldset>
+  <fieldset>
+    <legend>Art</legend>
+      <input type="radio" id="Ho" name="Hotel" value="Hotel">
+      <label for="Ho">Hotel</label>
+      <input type="radio" id="f" name="ferienwohnung" value="Ferienwohnung">
+      <label for="f">Ferienwohnung</label>
+      <input type="radio" id="Hs" name="Hostel" value="Hostel">
+      <label for="Hs">Hostel</label>
 
+  </fieldset>
+  <fieldset>
+    <legend>Dienstleistungen </legend>
+    <input type="checkbox" name="zutat[]" value="R" id="Re" checked>
+    <label for="Re">Reiseversicherung</label>
+    <input type="checkbox" name="zutat[]" value="f" id="check2">
+    <label for="f">Flughafentransfer</label>
+    <input type="checkbox" name="zutat[]" value="z" id="z">
+    <label for="z">zusätzliches Gepäck</label>
+  </fieldset>
+  <fieldset>
+    <legend>Reisezeitraum</legend>
+    <label for="start-date">Anfangszeitpunkt:</label>
+    <input type="date" id="start-date" name="start-date" required><br><br>
 
+    <label for="end-date">Endzeitpunkt:</label>
+    <input type="date" id="end-date" name="end-date" required><br><br>
+
+    <label for="duration">Dauer der Reise in Tagen (1-21):</label>
+    <input type="number" id="duration" name="duration" min="1" max="21" required><br><br>
+  </fieldset>
+</form>
 </body>
 </html>
